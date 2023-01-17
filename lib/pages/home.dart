@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:series/pages/details.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -15,7 +16,14 @@ class Home extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailPage(),
+                  ),
+                );
+              },
               child: ListTile(
                 leading: Container(
                   width: 78,
